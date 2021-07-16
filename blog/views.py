@@ -111,3 +111,7 @@ class BlogCommentCreate(LoginRequiredMixin, CreateView):
         After posting comment return to associated blog.
         """
         return reverse('blog-detail', kwargs={'pk': self.kwargs['pk'],})
+
+    def just_a_dummy_change(self, **kwargs):
+        x = 5
+        return "kakas"
